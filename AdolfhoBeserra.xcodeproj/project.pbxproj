@@ -13,6 +13,13 @@
 		16CC3A981AE023B80064FD01 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16CC3A971AE023B80064FD01 /* Images.xcassets */; };
 		16CC3A9B1AE023B80064FD01 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16CC3A991AE023B80064FD01 /* LaunchScreen.xib */; };
 		16CC3AA71AE023B80064FD01 /* AdolfhoBeserraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC3AA61AE023B80064FD01 /* AdolfhoBeserraTests.swift */; };
+		16CC3AB11AE025DB0064FD01 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CC3AB01AE025DB0064FD01 /* FirstViewController.swift */; };
+		16CC3AB31AE028420064FD01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CC3AB21AE028420064FD01 /* MapKit.framework */; };
+		16CFB6381AEAC053002C9663 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CFB6371AEAC053002C9663 /* Walkthrough.storyboard */; };
+		16CFB6421AEAC3CC002C9663 /* BWWalkthroughPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFB6401AEAC3CC002C9663 /* BWWalkthroughPageViewController.swift */; };
+		16CFB6431AEAC3CC002C9663 /* BWWalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16CFB6411AEAC3CC002C9663 /* BWWalkthroughViewController.swift */; };
+		16D915FF1AE03E5900493C34 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D915FE1AE03E5900493C34 /* Region.swift */; };
+		16D916011AE05A9000493C34 /* University.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D916001AE05A9000493C34 /* University.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,11 +38,18 @@
 		16CC3A901AE023B80064FD01 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		16CC3A921AE023B80064FD01 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		16CC3A951AE023B80064FD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		16CC3A971AE023B80064FD01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16CC3A971AE023B80064FD01 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdolfhoBeserra/Images.xcassets; sourceTree = "<group>"; };
 		16CC3A9A1AE023B80064FD01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		16CC3AA01AE023B80064FD01 /* AdolfhoBeserraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdolfhoBeserraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CC3AA51AE023B80064FD01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16CC3AA61AE023B80064FD01 /* AdolfhoBeserraTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdolfhoBeserraTests.swift; sourceTree = "<group>"; };
+		16CC3AB01AE025DB0064FD01 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		16CC3AB21AE028420064FD01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		16CFB6371AEAC053002C9663 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		16CFB6401AEAC3CC002C9663 /* BWWalkthroughPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughPageViewController.swift; sourceTree = "<group>"; };
+		16CFB6411AEAC3CC002C9663 /* BWWalkthroughViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BWWalkthroughViewController.swift; sourceTree = "<group>"; };
+		16D915FE1AE03E5900493C34 /* Region.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		16D916001AE05A9000493C34 /* University.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = University.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CC3AB31AE028420064FD01 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,10 +71,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167951FA1AEC1386002C8886 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				16D915FE1AE03E5900493C34 /* Region.swift */,
+				16D916001AE05A9000493C34 /* University.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		167951FB1AEC138C002C8886 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				16CFB6371AEAC053002C9663 /* Walkthrough.storyboard */,
+				16CC3A991AE023B80064FD01 /* LaunchScreen.xib */,
+				16CC3A941AE023B80064FD01 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		167951FC1AEC1391002C8886 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				16CC3AB01AE025DB0064FD01 /* FirstViewController.swift */,
+				16CC3A921AE023B80064FD01 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		16CC3A821AE023B80064FD01 = {
 			isa = PBXGroup;
 			children = (
+				16CC3AB21AE028420064FD01 /* MapKit.framework */,
 				16CC3A8D1AE023B80064FD01 /* AdolfhoBeserra */,
+				16CC3A971AE023B80064FD01 /* Images.xcassets */,
 				16CC3AA31AE023B80064FD01 /* AdolfhoBeserraTests */,
 				16CC3A8C1AE023B80064FD01 /* Products */,
 			);
@@ -77,11 +122,11 @@
 		16CC3A8D1AE023B80064FD01 /* AdolfhoBeserra */ = {
 			isa = PBXGroup;
 			children = (
+				16CFB63B1AEAC38C002C9663 /* BWWalkthrough */,
 				16CC3A901AE023B80064FD01 /* AppDelegate.swift */,
-				16CC3A921AE023B80064FD01 /* ViewController.swift */,
-				16CC3A941AE023B80064FD01 /* Main.storyboard */,
-				16CC3A971AE023B80064FD01 /* Images.xcassets */,
-				16CC3A991AE023B80064FD01 /* LaunchScreen.xib */,
+				167951FA1AEC1386002C8886 /* Model */,
+				167951FC1AEC1391002C8886 /* Controller */,
+				167951FB1AEC138C002C8886 /* View */,
 				16CC3A8E1AE023B80064FD01 /* Supporting Files */,
 			);
 			path = AdolfhoBeserra;
@@ -110,6 +155,15 @@
 				16CC3AA51AE023B80064FD01 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16CFB63B1AEAC38C002C9663 /* BWWalkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				16CFB6401AEAC3CC002C9663 /* BWWalkthroughPageViewController.swift */,
+				16CFB6411AEAC3CC002C9663 /* BWWalkthroughViewController.swift */,
+			);
+			name = BWWalkthrough;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16CC3A961AE023B80064FD01 /* Main.storyboard in Resources */,
+				16CFB6381AEAC053002C9663 /* Walkthrough.storyboard in Resources */,
 				16CC3A9B1AE023B80064FD01 /* LaunchScreen.xib in Resources */,
 				16CC3A981AE023B80064FD01 /* Images.xcassets in Resources */,
 			);
@@ -212,8 +267,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CFB6421AEAC3CC002C9663 /* BWWalkthroughPageViewController.swift in Sources */,
+				16CFB6431AEAC3CC002C9663 /* BWWalkthroughViewController.swift in Sources */,
+				16CC3AB11AE025DB0064FD01 /* FirstViewController.swift in Sources */,
 				16CC3A931AE023B80064FD01 /* ViewController.swift in Sources */,
 				16CC3A911AE023B80064FD01 /* AppDelegate.swift in Sources */,
+				16D915FF1AE03E5900493C34 /* Region.swift in Sources */,
+				16D916011AE05A9000493C34 /* University.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +469,7 @@
 				16CC3AAC1AE023B80064FD01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16CC3AAD1AE023B80064FD01 /* Build configuration list for PBXNativeTarget "AdolfhoBeserraTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +478,7 @@
 				16CC3AAF1AE023B80064FD01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

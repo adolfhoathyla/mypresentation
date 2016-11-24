@@ -1,25 +1,177 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wb9-Bc-Kpj">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Jsv-97-Xgp">
+            <objects>
+                <navigationController id="Wb9-Bc-Kpj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IBh-uG-Opd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="UUw-pl-Ndx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYR-I3-CDv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-406.875" y="313.73239436619718"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="AdolfhoBeserra" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="cvF-SX-qD1"/>
+                        <viewControllerLayoutGuide type="bottom" id="w1G-x8-GGO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vYk-L4-rpa">
+                                <rect key="frame" x="0.0" y="32" width="600" height="568"/>
+                            </mapView>
+                            <view alpha="0.69999999999999973" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YC1-0q-bMz">
+                                <rect key="frame" x="0.0" y="93" width="600" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yes, I'm Brazilian" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phF-Pm-Muj">
+                                        <rect key="frame" x="41" y="-5" width="504" height="66"/>
+                                        <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="20"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="phF-Pm-Muj" firstAttribute="top" secondItem="YC1-0q-bMz" secondAttribute="top" constant="-5" id="AAr-OM-rmc"/>
+                                    <constraint firstAttribute="trailing" secondItem="phF-Pm-Muj" secondAttribute="trailing" constant="55" id="Bd3-gd-LEm"/>
+                                    <constraint firstItem="phF-Pm-Muj" firstAttribute="leading" secondItem="YC1-0q-bMz" secondAttribute="leading" constant="41" id="Mnq-zV-9gz"/>
+                                    <constraint firstAttribute="bottom" secondItem="phF-Pm-Muj" secondAttribute="bottom" constant="-15" id="VpE-DV-Jqj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vYk-L4-rpa" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="32" id="04r-PP-L4d"/>
+                            <constraint firstItem="w1G-x8-GGO" firstAttribute="top" secondItem="vYk-L4-rpa" secondAttribute="bottom" id="34i-a7-scr"/>
+                            <constraint firstItem="YC1-0q-bMz" firstAttribute="top" secondItem="cvF-SX-qD1" secondAttribute="bottom" constant="29" id="8Da-3w-a9r"/>
+                            <constraint firstItem="vYk-L4-rpa" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9kO-8W-x64"/>
+                            <constraint firstItem="YC1-0q-bMz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="9zm-Ei-o9O"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YC1-0q-bMz" secondAttribute="trailing" constant="-16" id="F0j-l8-xBX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vYk-L4-rpa" secondAttribute="trailing" constant="-16" id="GwR-rc-0b8"/>
+                            <constraint firstItem="w1G-x8-GGO" firstAttribute="top" secondItem="YC1-0q-bMz" secondAttribute="bottom" constant="461" id="IdC-xm-IOk"/>
+                            <constraint firstItem="vYk-L4-rpa" firstAttribute="top" secondItem="YC1-0q-bMz" secondAttribute="bottom" constant="-107" id="Uzs-rY-kNg"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VON-ce-ovG">
+                        <barButtonItem key="leftBarButtonItem" image="prev" id="2nH-MB-woE">
+                            <connections>
+                                <action selector="buttonPrev:" destination="vXZ-lx-hvc" id="mdn-du-x3J"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="next" style="done" id="Wif-BY-8cw">
+                            <connections>
+                                <action selector="buttonNext:" destination="vXZ-lx-hvc" id="tQf-VB-r4L"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="buttonNext" destination="Wif-BY-8cw" id="HIh-Yy-JtV"/>
+                        <outlet property="buttonPrev" destination="2nH-MB-woE" id="la1-E4-ChG"/>
+                        <outlet property="labelStatus" destination="phF-Pm-Muj" id="jyG-3K-YAC"/>
+                        <outlet property="myMapView" destination="vYk-L4-rpa" id="PBB-Xo-WGO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="378" y="313"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="Ov8-jW-AWe">
+            <objects>
+                <viewController restorationIdentifier="FirstViewController" storyboardIdentifier="FirstViewController" id="tXd-1J-bN1" customClass="FirstViewController" customModule="AdolfhoBeserra" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zsi-hs-GeG"/>
+                        <viewControllerLayoutGuide type="bottom" id="oxi-f4-lBa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A7w-XV-b6R">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQX-ra-TKF">
+                                <rect key="frame" x="191" y="240" width="219" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="8gr-zF-kkS"/>
+                                    <constraint firstAttribute="width" constant="219" id="hJ1-GS-2Yz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adolfho Athyla, 22" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFr-3g-Kzh">
+                                <rect key="frame" x="217" y="285" width="166" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="166" id="R7l-U3-RE6"/>
+                                    <constraint firstAttribute="height" constant="21" id="shY-wu-iqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rxh-eF-IFX">
+                                <rect key="frame" x="235" y="190" width="131" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="6ml-wi-hKM"/>
+                                    <constraint firstAttribute="width" constant="131" id="QiF-EK-8bL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6f-TS-9ad">
+                                <rect key="frame" x="259" y="472" width="83" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LKw-gR-Unx"/>
+                                    <constraint firstAttribute="width" constant="83" id="eVz-b8-Ak2"/>
+                                </constraints>
+                                <state key="normal" title="Meet me">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToMap:" destination="tXd-1J-bN1" eventType="touchUpInside" id="7i4-Ge-2XV"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="nQX-ra-TKF" secondAttribute="centerY" constant="41.5" id="2JG-4u-Las"/>
+                            <constraint firstAttribute="centerX" secondItem="Rxh-eF-IFX" secondAttribute="centerX" constant="-0.5" id="Cua-tL-UJU"/>
+                            <constraint firstAttribute="centerX" secondItem="o6f-TS-9ad" secondAttribute="centerX" constant="-0.5" id="JS0-uU-74O"/>
+                            <constraint firstAttribute="centerY" secondItem="Rxh-eF-IFX" secondAttribute="centerY" constant="92" id="Md3-MC-EvQ"/>
+                            <constraint firstAttribute="centerY" secondItem="pFr-3g-Kzh" secondAttribute="centerY" constant="4.5" id="WTx-fs-zhs"/>
+                            <constraint firstAttribute="centerY" secondItem="o6f-TS-9ad" secondAttribute="centerY" constant="-187" id="XcL-rj-4bT"/>
+                            <constraint firstAttribute="centerX" secondItem="nQX-ra-TKF" secondAttribute="centerX" constant="-0.5" id="Zyi-zX-Brk"/>
+                            <constraint firstAttribute="centerX" secondItem="pFr-3g-Kzh" secondAttribute="centerX" id="pGY-aF-PaU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonKnowMe" destination="o6f-TS-9ad" id="s0X-Wf-oAj"/>
+                        <outlet property="hello" destination="Rxh-eF-IFX" id="z8Q-XE-BXF"/>
+                        <outlet property="im" destination="nQX-ra-TKF" id="ZFN-dM-glg"/>
+                        <outlet property="me" destination="pFr-3g-Kzh" id="0KR-Ty-3ml"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0c-ke-uEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="378.75" y="1013.0281690140845"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="next" width="54" height="54"/>
+        <image name="prev" width="54" height="54"/>
+    </resources>
 </document>

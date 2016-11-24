@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="XYt-LG-Ztd">
+            <objects>
+                <viewController storyboardIdentifier="walk" id="TI9-K1-RYY" customClass="BWWalkthroughViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NuX-xo-He6"/>
+                        <viewControllerLayoutGuide type="bottom" id="fNj-yl-2Ro"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YGp-6u-rQD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-QO-AKL">
+                                <rect key="frame" x="281" y="247" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0n-b0-bEh">
+                                <rect key="frame" x="21" y="502" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="b57-mZ-pGJ"/>
+                                    <constraint firstAttribute="height" constant="55" id="pm2-Ly-A4F"/>
+                                </constraints>
+                                <state key="normal" image="prevButton">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPage" destination="TI9-K1-RYY" eventType="touchUpInside" id="AID-pp-qfw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLS-gY-xN9">
+                                <rect key="frame" x="21" y="28" width="63" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="close:" destination="TI9-K1-RYY" eventType="touchUpInside" id="hSn-v6-2fS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exS-9t-sFK">
+                                <rect key="frame" x="523" y="502" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="BHN-Ko-spW"/>
+                                    <constraint firstAttribute="width" constant="55" id="x5Z-cq-jXp"/>
+                                </constraints>
+                                <state key="normal" image="nextButton">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage" destination="TI9-K1-RYY" eventType="touchUpInside" id="oqP-4B-9Kk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50922389729999995" green="0.76378066830000002" blue="0.95752446339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Kfk-QO-AKL" secondAttribute="centerY" constant="34.5" id="0C4-Ym-K7U"/>
+                            <constraint firstItem="fNj-yl-2Ro" firstAttribute="top" secondItem="exS-9t-sFK" secondAttribute="bottom" constant="43" id="7sd-QH-3C3"/>
+                            <constraint firstItem="Z0n-b0-bEh" firstAttribute="leading" secondItem="YGp-6u-rQD" secondAttribute="leadingMargin" constant="5" id="Qtf-Rm-4Ie"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="exS-9t-sFK" secondAttribute="trailing" constant="6" id="mqf-bd-wbr"/>
+                            <constraint firstAttribute="centerX" secondItem="Kfk-QO-AKL" secondAttribute="centerX" constant="-0.5" id="nEp-1S-hu6"/>
+                            <constraint firstItem="fNj-yl-2Ro" firstAttribute="top" secondItem="Z0n-b0-bEh" secondAttribute="bottom" constant="43" id="pKp-Ls-pUc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="qLS-gY-xN9" id="EbM-1J-wzj"/>
+                        <outlet property="nextButton" destination="exS-9t-sFK" id="oQy-Pg-ppP"/>
+                        <outlet property="pageControl" destination="Kfk-QO-AKL" id="v2Y-hr-7Ie"/>
+                        <outlet property="prevButton" destination="Z0n-b0-bEh" id="BLy-sx-TTM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LcA-en-7R9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="301"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="Oq7-Et-Dvf">
+            <objects>
+                <viewController storyboardIdentifier="walk0ifce" id="acz-AM-RpH" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hyC-Ot-1fQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="iNe-4L-zWi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JCn-8w-DBa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ifceGreat" translatesAutoresizingMaskIntoConstraints="NO" id="U8T-5f-SGv">
+                                <rect key="frame" x="240" y="352" width="120" height="153"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="QGR-vt-bli"/>
+                                    <constraint firstAttribute="width" constant="120" id="vU5-7t-A4o"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="    I studied computer technician at the Federal Institute. I concluded last year." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2s7-lf-nGr">
+                                <rect key="frame" x="168" y="99" width="265" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Krt-Jm-YBn"/>
+                                    <constraint firstAttribute="height" constant="128" id="khg-6D-y69"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22870885260000001" green="0.52643916420000003" blue="0.6242503157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="2s7-lf-nGr" secondAttribute="centerY" constant="137" id="O3M-Wp-7nI"/>
+                            <constraint firstAttribute="centerX" secondItem="2s7-lf-nGr" secondAttribute="centerX" constant="-0.5" id="ndf-mR-wL6"/>
+                            <constraint firstAttribute="centerX" secondItem="U8T-5f-SGv" secondAttribute="centerX" id="piM-n0-1YZ"/>
+                            <constraint firstAttribute="centerY" secondItem="U8T-5f-SGv" secondAttribute="centerY" constant="-128.5" id="xKH-mo-CmO"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="1.2" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPx-fD-Ckt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="-406"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="EU2-mz-08H">
+            <objects>
+                <viewController storyboardIdentifier="walk1ifce" id="Su8-G0-ggi" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8ZW-bN-D2T"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ys6-ny-KEX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vwm-9A-aH9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azf-9P-WmL">
+                                <rect key="frame" x="163" y="75" width="275" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="qn8-3M-Gof"/>
+                                    <constraint firstAttribute="width" constant="275" id="zT7-2G-N3D"/>
+                                </constraints>
+                                <string key="text">    Participated in projects such as: "Easy Bidding Control System" which was a proposed software by a group of teachers to assist the bidding of their institute. It was development used PHP.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ebcs" translatesAutoresizingMaskIntoConstraints="NO" id="P8J-Nj-xO7">
+                                <rect key="frame" x="246" y="376" width="108" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="Rgr-GR-Kx4"/>
+                                    <constraint firstAttribute="width" constant="108" id="cfb-ai-BD7"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.69803921570000005" green="0.61568627450000002" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="azf-9P-WmL" secondAttribute="centerX" constant="-0.5" id="F7e-It-NLs"/>
+                            <constraint firstAttribute="centerY" secondItem="P8J-Nj-xO7" secondAttribute="centerY" constant="-127" id="ksp-7C-q8J"/>
+                            <constraint firstAttribute="centerX" secondItem="P8J-Nj-xO7" secondAttribute="centerX" id="lrd-MG-w8f"/>
+                            <constraint firstAttribute="centerY" secondItem="azf-9P-WmL" secondAttribute="centerY" constant="148" id="ySu-fj-tqY"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8pd-gf-Kyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="-406"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="Zgy-8d-kEE">
+            <objects>
+                <viewController storyboardIdentifier="walk0fa7" id="L3s-Y0-Yoj" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sq3-Ti-U4R"/>
+                        <viewControllerLayoutGuide type="bottom" id="eIW-7F-uzs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c0l-bq-QHY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fa7IconGreat" translatesAutoresizingMaskIntoConstraints="NO" id="sNn-YM-LeC">
+                                <rect key="frame" x="241" y="368" width="119" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="119" id="AxC-sw-1l6"/>
+                                    <constraint firstAttribute="height" constant="117" id="UfY-7i-Lw4"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="    At FA7 do my graduation in information systems. Participated of development projects that contributed very professionally." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbs-80-NMV">
+                                <rect key="frame" x="150" y="89" width="298" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="298" id="4LS-9t-Ngp"/>
+                                    <constraint firstAttribute="height" constant="143" id="Ijb-gG-QwQ"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.78039215689999997" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="sNn-YM-LeC" secondAttribute="centerX" id="0LW-rf-pGg"/>
+                            <constraint firstAttribute="centerX" secondItem="Hbs-80-NMV" secondAttribute="centerX" constant="1" id="Lsy-Lo-cqc"/>
+                            <constraint firstAttribute="centerY" secondItem="Hbs-80-NMV" secondAttribute="centerY" constant="139.5" id="alU-Yp-S2l"/>
+                            <constraint firstAttribute="centerY" secondItem="sNn-YM-LeC" secondAttribute="centerY" constant="-126.5" id="fFE-A5-QFj"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w51-Lw-pOX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="301"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="GKS-t7-fyn">
+            <objects>
+                <viewController storyboardIdentifier="walk0bepid" id="AqC-hp-W2d" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ch-a1-eDH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cra-9E-6TJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sw7-Da-qVA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="bepid" translatesAutoresizingMaskIntoConstraints="NO" id="bzP-b2-S1D">
+                                <rect key="frame" x="105" y="301" width="391" height="224"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="224" id="ZYZ-W1-oJH"/>
+                                    <constraint firstAttribute="width" constant="391" id="sbA-TW-2L9"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WF-y7-Mch">
+                                <rect key="frame" x="166" y="89" width="269" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7XJ-3P-XWz"/>
+                                    <constraint firstAttribute="width" constant="269" id="h7R-aM-JyK"/>
+                                </constraints>
+                                <string key="text">    Is a Brazilian program for app development for iOS devices. Fantastic by the way. The methodology used is Challenge Based Learning (CBL).</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.38485488915108135" green="0.77865318501229708" blue="0.86787799869292925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="bzP-b2-S1D" secondAttribute="centerY" constant="-113" id="46c-qQ-yZ3"/>
+                            <constraint firstAttribute="centerX" secondItem="bzP-b2-S1D" secondAttribute="centerX" constant="-0.5" id="EKb-ls-bXS"/>
+                            <constraint firstAttribute="centerX" secondItem="6WF-y7-Mch" secondAttribute="centerX" constant="-0.5" id="ddf-nZ-CYA"/>
+                            <constraint firstAttribute="centerY" secondItem="6WF-y7-Mch" secondAttribute="centerY" constant="147" id="jdS-Pp-jT9"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.69999999999999996"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jad-eK-Tco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="1048"/>
+        </scene>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="J7t-A0-8A5">
+            <objects>
+                <viewController storyboardIdentifier="walkController" id="D4l-wV-dmT" customClass="BWWalkthroughViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q4a-Nq-aJn"/>
+                        <viewControllerLayoutGuide type="bottom" id="rJW-kD-iPi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gF0-yC-mWj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="7xw-5u-1JX">
+                                <rect key="frame" x="281" y="532" width="39" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kA-t2-hQb">
+                                <rect key="frame" x="547" y="405" width="53" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="9pl-xL-lCD"/>
+                                    <constraint firstAttribute="height" constant="54" id="Bbl-sC-3wh"/>
+                                </constraints>
+                                <state key="normal" image="nextButton">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage" destination="D4l-wV-dmT" eventType="touchUpInside" id="UhU-ab-dZa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QmC-Wg-MFS">
+                                <rect key="frame" x="0.0" y="405" width="53" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="TAB-xC-Ldu"/>
+                                    <constraint firstAttribute="height" constant="54" id="eLT-Ob-XWa"/>
+                                </constraints>
+                                <state key="normal" image="prevButton">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPage" destination="D4l-wV-dmT" eventType="touchUpInside" id="SPi-pv-7QM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Abilities &amp; Interests" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbp-Lv-ynb">
+                                <rect key="frame" x="205" y="489" width="191" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="mYW-WO-hX4"/>
+                                    <constraint firstAttribute="width" constant="191" id="pkk-4E-Bqx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.78039215689999997" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="gbp-Lv-ynb" secondAttribute="centerY" constant="-206.5" id="3tC-Yy-vXU"/>
+                            <constraint firstAttribute="centerY" secondItem="7xw-5u-1JX" secondAttribute="centerY" constant="-250.5" id="9Pz-gf-H4o"/>
+                            <constraint firstItem="rJW-kD-iPi" firstAttribute="top" secondItem="QmC-Wg-MFS" secondAttribute="bottom" constant="141" id="BEh-lh-9Ab"/>
+                            <constraint firstAttribute="centerX" secondItem="gbp-Lv-ynb" secondAttribute="centerX" constant="-0.5" id="EPa-Pd-udt"/>
+                            <constraint firstItem="rJW-kD-iPi" firstAttribute="top" secondItem="2kA-t2-hQb" secondAttribute="bottom" constant="141" id="KeM-Xm-JzO"/>
+                            <constraint firstItem="QmC-Wg-MFS" firstAttribute="leading" secondItem="gF0-yC-mWj" secondAttribute="leadingMargin" constant="-16" id="VxE-zM-0CO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2kA-t2-hQb" secondAttribute="trailing" constant="-16" id="ZU7-tZ-wdy"/>
+                            <constraint firstAttribute="centerX" secondItem="7xw-5u-1JX" secondAttribute="centerX" constant="-0.5" id="yFz-ML-btj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="2kA-t2-hQb" id="wj7-EM-QBZ"/>
+                        <outlet property="pageControl" destination="7xw-5u-1JX" id="g32-na-ecH"/>
+                        <outlet property="prevButton" destination="QmC-Wg-MFS" id="j8Z-58-v0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="STC-ru-Myg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="545" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="CgL-qU-K8e">
+            <objects>
+                <viewController storyboardIdentifier="walk0Abilities" id="iFb-0e-ewV" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tPS-Gc-x3y"/>
+                        <viewControllerLayoutGuide type="bottom" id="MYa-m7-73j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CJq-mt-pX7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Project Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSo-0a-cgD">
+                                <rect key="frame" x="175" y="342" width="251" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="KjA-Rc-bA0"/>
+                                    <constraint firstAttribute="width" constant="251" id="d0f-5Y-YSs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="mp" translatesAutoresizingMaskIntoConstraints="NO" id="265-DV-iue">
+                                <rect key="frame" x="234" y="134" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="NzP-29-t6h"/>
+                                    <constraint firstAttribute="height" constant="128" id="Zqf-m9-0Hc"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.49493499800000001" blue="0.2165244606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="265-DV-iue" secondAttribute="centerY" constant="102" id="4T5-JG-srO"/>
+                            <constraint firstAttribute="centerX" secondItem="265-DV-iue" secondAttribute="centerX" constant="-0.5" id="FOS-y1-CtG"/>
+                            <constraint firstAttribute="centerY" secondItem="dSo-0a-cgD" secondAttribute="centerY" constant="-63" id="fbx-m6-aQJ"/>
+                            <constraint firstAttribute="centerX" secondItem="dSo-0a-cgD" secondAttribute="centerX" constant="-0.5" id="xzL-Ky-pfu"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1.2" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ixO-UC-4KP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1266" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="7Rm-rm-FuP">
+            <objects>
+                <viewController storyboardIdentifier="walk1Abilities" id="KfL-9Z-8Di" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X7T-4q-nEy"/>
+                        <viewControllerLayoutGuide type="bottom" id="98P-XM-Xmb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SRq-M1-OQ9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="group" translatesAutoresizingMaskIntoConstraints="NO" id="CFj-B2-yjc">
+                                <rect key="frame" x="234" y="134" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="7DC-Xe-B3A"/>
+                                    <constraint firstAttribute="height" constant="128" id="lEb-Nt-l57"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Group Skills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cNa-Hh-h6W">
+                                <rect key="frame" x="198" y="336" width="204" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="2Yx-B2-SSn"/>
+                                    <constraint firstAttribute="width" constant="204" id="IbH-3K-hTr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="25"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41657424175550939" green="0.80095889869721515" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="CFj-B2-yjc" secondAttribute="centerY" constant="102" id="BRm-mW-FKK"/>
+                            <constraint firstAttribute="centerX" secondItem="CFj-B2-yjc" secondAttribute="centerX" constant="-0.5" id="J6b-7W-dr8"/>
+                            <constraint firstAttribute="centerY" secondItem="cNa-Hh-h6W" secondAttribute="centerY" constant="-56.5" id="Qt7-nf-3RY"/>
+                            <constraint firstAttribute="centerX" secondItem="cNa-Hh-h6W" secondAttribute="centerX" id="ffH-B3-e32"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCr-Mw-Yfd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="GTJ-3x-puN">
+            <objects>
+                <viewController storyboardIdentifier="walk2Abilities" id="cTL-zd-KiW" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DqF-Ot-c82"/>
+                        <viewControllerLayoutGuide type="bottom" id="xWq-0b-ea8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ayy-rj-ee5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="development" translatesAutoresizingMaskIntoConstraints="NO" id="EJc-Q9-6G1">
+                                <rect key="frame" x="260" y="133" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ejc-tc-80r"/>
+                                    <constraint firstAttribute="width" constant="133" id="dBo-rV-3qE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Development Methodologies" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-oG-iIO">
+                                <rect key="frame" x="116" y="333" width="369" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="369" id="CXs-31-tZQ"/>
+                                    <constraint firstAttribute="height" constant="41" id="o4G-3y-ip4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.73685305392409861" green="0.82167376893939392" blue="0.23806493822366043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="EJc-Q9-6G1" secondAttribute="centerY" constant="103" id="8tW-xA-DPK"/>
+                            <constraint firstAttribute="centerY" secondItem="fgo-oG-iIO" secondAttribute="centerY" constant="-53.5" id="Cpz-hT-c6v"/>
+                            <constraint firstAttribute="centerX" secondItem="EJc-Q9-6G1" secondAttribute="centerX" constant="-26.5" id="TQ1-Bu-p97"/>
+                            <constraint firstAttribute="centerX" secondItem="fgo-oG-iIO" secondAttribute="centerX" constant="-0.5" id="gFW-MQ-lXb"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v6e-rx-TKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2639" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="upD-00-AKR">
+            <objects>
+                <viewController storyboardIdentifier="walk0Interests" id="xp9-0n-fab" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cme-w6-2eo"/>
+                        <viewControllerLayoutGuide type="bottom" id="GCO-VP-4lL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WPf-hq-3UQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="grandeEmpresa" translatesAutoresizingMaskIntoConstraints="NO" id="kKP-bJ-f1s">
+                                <rect key="frame" x="234" y="134" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="133" id="6EQ-Oi-WgC"/>
+                                    <constraint firstAttribute="height" constant="128" id="N1A-jQ-WjP"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="I intent to work in a large company" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="roi-jF-NyN">
+                                <rect key="frame" x="180" y="335" width="240" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="BGe-uS-PNL"/>
+                                    <constraint firstAttribute="height" constant="94" id="NJw-am-jtc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.28177377809999998" blue="0.14847569059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="roi-jF-NyN" secondAttribute="centerX" id="32Y-Jn-8Lq"/>
+                            <constraint firstAttribute="centerX" secondItem="kKP-bJ-f1s" secondAttribute="centerX" constant="-0.5" id="RBb-Fn-CIl"/>
+                            <constraint firstAttribute="centerY" secondItem="roi-jF-NyN" secondAttribute="centerY" constant="-82" id="hKO-If-BE8"/>
+                            <constraint firstAttribute="centerY" secondItem="kKP-bJ-f1s" secondAttribute="centerY" constant="102" id="rKA-vt-ZTF"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TNb-bY-PFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="3tG-uf-TDA">
+            <objects>
+                <viewController storyboardIdentifier="walk1Interests" id="7Bz-mJ-OaP" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UBA-CR-Ehv"/>
+                        <viewControllerLayoutGuide type="bottom" id="b9V-Jp-vBZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="idt-P3-MVc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="academic" translatesAutoresizingMaskIntoConstraints="NO" id="Mju-Rz-LiV">
+                                <rect key="frame" x="234" y="130" width="133" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="2HG-px-acq"/>
+                                    <constraint firstAttribute="width" constant="133" id="49t-aw-3HE"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="But also pursue an academic carrer" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbE-h7-7CD">
+                                <rect key="frame" x="180" y="331" width="240" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="Cfx-og-1Tl"/>
+                                    <constraint firstAttribute="width" constant="240" id="Y4v-4e-auu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.50922389729999995" green="0.76378066830000002" blue="0.95752446339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="RbE-h7-7CD" secondAttribute="centerX" id="KAg-1Q-qch"/>
+                            <constraint firstAttribute="centerY" secondItem="Mju-Rz-LiV" secondAttribute="centerY" constant="106" id="NH8-5G-Hos"/>
+                            <constraint firstAttribute="centerY" secondItem="RbE-h7-7CD" secondAttribute="centerY" constant="-78" id="aRp-WR-Irz"/>
+                            <constraint firstAttribute="centerX" secondItem="Mju-Rz-LiV" secondAttribute="centerX" constant="-0.5" id="dyq-Eq-HQD"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="0.5" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EKX-lq-GoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4042" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="otg-RH-0hn">
+            <objects>
+                <viewController storyboardIdentifier="walkEnd" id="xqp-La-q5W" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="amV-A2-Ncl"/>
+                        <viewControllerLayoutGuide type="bottom" id="NP1-Cm-TCh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V5R-uu-nA0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="That's it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IaT-7T-sOT">
+                                <rect key="frame" x="241" y="226" width="118" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="118" id="gyJ-bY-HRw"/>
+                                    <constraint firstAttribute="height" constant="45" id="zAV-ie-lLy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="vku-Hs-QyC">
+                                <rect key="frame" x="69" y="104" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="JIU-JA-qUI"/>
+                                    <constraint firstAttribute="width" constant="35" id="zrn-RF-C9r"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="D2w-SC-TzI">
+                                <rect key="frame" x="234" y="39" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="KXk-jU-REq"/>
+                                    <constraint firstAttribute="width" constant="36" id="XZU-wY-H9Y"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-fs-8fl">
+                                <rect key="frame" x="141" y="154" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="J66-QU-X9U"/>
+                                    <constraint firstAttribute="width" constant="35" id="lWj-7L-SzL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="XiV-rp-23Z">
+                                <rect key="frame" x="294" y="161" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="TtU-hK-VoY"/>
+                                    <constraint firstAttribute="height" constant="23" id="iR3-33-QqR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="QkO-ZK-LS6">
+                                <rect key="frame" x="454" y="158" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="627-W0-TOD"/>
+                                    <constraint firstAttribute="height" constant="23" id="CNS-Of-grF"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="v7C-Rg-iE7">
+                                <rect key="frame" x="450" y="80" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="QQj-hJ-fGT"/>
+                                    <constraint firstAttribute="width" constant="35" id="tLk-CW-uXQ"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="L78-dT-rIn">
+                                <rect key="frame" x="73" y="194" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="DUX-AJ-gAz"/>
+                                    <constraint firstAttribute="height" constant="27" id="njg-gR-J2V"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="kfn-uv-5sd">
+                                <rect key="frame" x="328" y="123" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="PeX-Xn-F0Q"/>
+                                    <constraint firstAttribute="width" constant="36" id="bfc-YD-pfL"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="mmB-ti-Zrq">
+                                <rect key="frame" x="468" y="240" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="CHC-DG-5hX"/>
+                                    <constraint firstAttribute="height" constant="27" id="ymv-m7-mHV"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="Vix-A0-o3a">
+                                <rect key="frame" x="207" y="125" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Rzr-os-cQj"/>
+                                    <constraint firstAttribute="height" constant="27" id="Y9b-pB-cHK"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-Pe-ABY">
+                                <rect key="frame" x="68" y="271" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="MAG-UK-2Z1"/>
+                                    <constraint firstAttribute="width" constant="35" id="yPs-Bk-2iT"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="Fpm-hu-DVX">
+                                <rect key="frame" x="421" y="299" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="79A-X8-DeK"/>
+                                    <constraint firstAttribute="height" constant="23" id="OeQ-Qs-qJU"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem1" translatesAutoresizingMaskIntoConstraints="NO" id="edN-FL-EyI">
+                                <rect key="frame" x="153" y="428" width="35" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="ugV-ut-AeE"/>
+                                    <constraint firstAttribute="height" constant="23" id="ynG-st-dmh"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="9Gq-6h-DKW">
+                                <rect key="frame" x="159" y="319" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="1Wy-g7-sy4"/>
+                                    <constraint firstAttribute="width" constant="36" id="aKL-34-FLw"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="it7-jI-xaV">
+                                <rect key="frame" x="414" y="395" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="I0G-Rx-i8u"/>
+                                    <constraint firstAttribute="height" constant="27" id="t0b-Oy-VWm"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="nuvem2" translatesAutoresizingMaskIntoConstraints="NO" id="f5e-tp-vDd">
+                                <rect key="frame" x="68" y="382" width="36" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="Qgj-Dv-TKu"/>
+                                    <constraint firstAttribute="height" constant="27" id="oyg-LA-JsK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thank you (:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Ik-zw-IsF">
+                                <rect key="frame" x="200" y="347" width="201" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="201" id="Bbd-qt-6Sz"/>
+                                    <constraint firstAttribute="height" constant="53" id="e3p-ht-iyI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="34"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54536147530000001" green="0.62489794460000003" blue="0.89770754419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="D2w-SC-TzI" secondAttribute="centerX" constant="48" id="26e-PV-x6Q"/>
+                            <constraint firstAttribute="centerY" secondItem="Fpm-hu-DVX" secondAttribute="centerY" constant="-10.5" id="2ez-Xf-0dR"/>
+                            <constraint firstAttribute="centerY" secondItem="v7C-Rg-iE7" secondAttribute="centerY" constant="208.5" id="2i2-f0-1g2"/>
+                            <constraint firstAttribute="centerY" secondItem="XiV-rp-23Z" secondAttribute="centerY" constant="127.5" id="6Sa-s8-K8Z"/>
+                            <constraint firstAttribute="centerY" secondItem="mmB-ti-Zrq" secondAttribute="centerY" constant="46.5" id="8QM-My-1Ws"/>
+                            <constraint firstAttribute="centerY" secondItem="Vix-A0-o3a" secondAttribute="centerY" constant="161.5" id="DHi-NK-7l4"/>
+                            <constraint firstAttribute="centerX" secondItem="IaT-7T-sOT" secondAttribute="centerX" id="Dk5-WO-OYd"/>
+                            <constraint firstAttribute="centerY" secondItem="9Gq-6h-DKW" secondAttribute="centerY" constant="-32.5" id="GuM-wM-el5"/>
+                            <constraint firstAttribute="centerY" secondItem="vku-Hs-QyC" secondAttribute="centerY" constant="184.5" id="JAZ-Ke-jNj"/>
+                            <constraint firstAttribute="centerY" secondItem="L78-dT-rIn" secondAttribute="centerY" constant="92.5" id="QyA-N9-Q52"/>
+                            <constraint firstAttribute="centerX" secondItem="Fpm-hu-DVX" secondAttribute="centerX" constant="-138.5" id="UDw-TM-ebA"/>
+                            <constraint firstAttribute="centerY" secondItem="3Ik-zw-IsF" secondAttribute="centerY" constant="-73.5" id="UtC-QP-Pxl"/>
+                            <constraint firstAttribute="centerX" secondItem="Vix-A0-o3a" secondAttribute="centerX" constant="75" id="V8P-lm-KM9"/>
+                            <constraint firstAttribute="centerY" secondItem="SzS-Pe-ABY" secondAttribute="centerY" constant="17.5" id="XJ7-zp-b4o"/>
+                            <constraint firstAttribute="centerX" secondItem="SzS-Pe-ABY" secondAttribute="centerX" constant="214.5" id="a4s-Nk-ku7"/>
+                            <constraint firstAttribute="centerX" secondItem="3Ik-zw-IsF" secondAttribute="centerX" id="bDG-tz-TF8"/>
+                            <constraint firstAttribute="centerX" secondItem="f5e-tp-vDd" secondAttribute="centerX" constant="214" id="bga-28-JIS"/>
+                            <constraint firstAttribute="centerX" secondItem="kfn-uv-5sd" secondAttribute="centerX" constant="-46" id="blJ-be-K4t"/>
+                            <constraint firstAttribute="centerX" secondItem="jsI-fs-8fl" secondAttribute="centerX" constant="141.5" id="cLN-8s-OUe"/>
+                            <constraint firstAttribute="centerX" secondItem="9Gq-6h-DKW" secondAttribute="centerX" constant="123" id="cVz-cI-Pft"/>
+                            <constraint firstAttribute="centerX" secondItem="Vix-A0-o3a" secondAttribute="centerX" constant="75" id="cjE-Kd-xFN"/>
+                            <constraint firstAttribute="centerX" secondItem="L78-dT-rIn" secondAttribute="centerX" constant="209" id="dI3-PU-0Uh"/>
+                            <constraint firstAttribute="centerY" secondItem="IaT-7T-sOT" secondAttribute="centerY" constant="51.5" id="fCN-dQ-sue"/>
+                            <constraint firstAttribute="centerX" secondItem="XiV-rp-23Z" secondAttribute="centerX" constant="-11.5" id="fHT-2H-UHv"/>
+                            <constraint firstAttribute="centerY" secondItem="jsI-fs-8fl" secondAttribute="centerY" constant="134.5" id="fHb-Jz-IU0"/>
+                            <constraint firstAttribute="centerX" secondItem="v7C-Rg-iE7" secondAttribute="centerX" constant="-167.5" id="h8X-6N-jMl"/>
+                            <constraint firstAttribute="centerY" secondItem="D2w-SC-TzI" secondAttribute="centerY" constant="247.5" id="kDC-LK-VVa"/>
+                            <constraint firstAttribute="centerY" secondItem="f5e-tp-vDd" secondAttribute="centerY" constant="-95.5" id="lJo-PG-17u"/>
+                            <constraint firstAttribute="centerY" secondItem="edN-FL-EyI" secondAttribute="centerY" constant="-139.5" id="lqZ-7t-cxd"/>
+                            <constraint firstAttribute="centerX" secondItem="QkO-ZK-LS6" secondAttribute="centerX" constant="-171.5" id="mdh-Ue-hCT"/>
+                            <constraint firstAttribute="centerX" secondItem="vku-Hs-QyC" secondAttribute="centerX" constant="213.5" id="msd-6y-hCY"/>
+                            <constraint firstAttribute="centerX" secondItem="it7-jI-xaV" secondAttribute="centerX" constant="-132" id="o36-pK-Ndn"/>
+                            <constraint firstAttribute="centerY" secondItem="kfn-uv-5sd" secondAttribute="centerY" constant="163.5" id="pGI-eE-QuF"/>
+                            <constraint firstAttribute="centerX" secondItem="edN-FL-EyI" secondAttribute="centerX" constant="129.5" id="teU-xw-kLt"/>
+                            <constraint firstAttribute="centerX" secondItem="mmB-ti-Zrq" secondAttribute="centerX" constant="-186" id="uUI-vK-cuK"/>
+                            <constraint firstAttribute="centerY" secondItem="QkO-ZK-LS6" secondAttribute="centerY" constant="130.5" id="uh2-ym-wev"/>
+                            <constraint firstAttribute="centerY" secondItem="it7-jI-xaV" secondAttribute="centerY" constant="-108.5" id="wdU-kM-ZPv"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationtype" value="InOut"/>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2V-is-ajv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4770" y="1941"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="gjD-OM-ReS">
+            <objects>
+                <viewController storyboardIdentifier="walk1bepid" id="iAP-YR-zMB" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ae3-hW-kta"/>
+                        <viewControllerLayoutGuide type="bottom" id="W8S-W9-qkc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DgL-fT-l03">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDd-xZ-Tek">
+                                <rect key="frame" x="169" y="85" width="262" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="gua-vQ-lGs"/>
+                                    <constraint firstAttribute="width" constant="262" id="hNd-2q-ksQ"/>
+                                </constraints>
+                                <string key="text">    The first developed an application in order to create review's establishments and put them in a photo, giving the possibility to share it,  creating a sense of social network.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="iRatingApp" translatesAutoresizingMaskIntoConstraints="NO" id="bdK-J8-P20">
+                                <rect key="frame" x="226" y="352" width="149" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="DBO-7w-7FE"/>
+                                    <constraint firstAttribute="width" constant="149" id="xe1-Dj-sBw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.55150717538249017" blue="0.50778123278700527" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bdK-J8-P20" secondAttribute="centerX" id="3GZ-0Y-s1D"/>
+                            <constraint firstAttribute="centerX" secondItem="bDd-xZ-Tek" secondAttribute="centerX" id="VFS-0l-BiV"/>
+                            <constraint firstAttribute="centerY" secondItem="bDd-xZ-Tek" secondAttribute="centerY" constant="131" id="jCh-6a-NgP"/>
+                            <constraint firstAttribute="centerY" secondItem="bdK-J8-P20" secondAttribute="centerY" constant="-124.5" id="w6P-a5-UZa"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.69999999999999996" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cui-Z9-AjD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="1048"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="mcq-ht-Oif">
+            <objects>
+                <viewController storyboardIdentifier="walk2bepid" id="CWJ-Bg-kNt" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BDm-Pc-fcQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="daQ-EZ-gyK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m54-9a-kbs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fastMapApp" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-j7-pLS">
+                                <rect key="frame" x="243" y="86" width="114" height="225"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="114" id="CRu-MQ-AAM"/>
+                                    <constraint firstAttribute="height" constant="225" id="lNc-sH-Vhl"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-XZ-5ZP">
+                                <rect key="frame" x="169" y="303" width="263" height="191"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="263" id="CzB-fB-Y7S"/>
+                                    <constraint firstAttribute="height" constant="191" id="LLh-iW-OVv"/>
+                                </constraints>
+                                <string key="text">    The second challenge is based on map. Search for places that every person needs, but the focus is to search only the places that are open in the current time, giving the possibility to see details about the place. Also allowing for the sharing of information on the establishment with family and friends.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.54536147532073298" green="0.62489794460547843" blue="0.89770754419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HI6-XZ-5ZP" secondAttribute="centerX" constant="-0.5" id="7jD-bm-AMN"/>
+                            <constraint firstAttribute="centerY" secondItem="Nmv-j7-pLS" secondAttribute="centerY" constant="101.5" id="XEN-qg-dRh"/>
+                            <constraint firstAttribute="centerY" secondItem="HI6-XZ-5ZP" secondAttribute="centerY" constant="-98.5" id="jba-vF-L2B"/>
+                            <constraint firstAttribute="centerX" secondItem="Nmv-j7-pLS" secondAttribute="centerX" id="jhP-JL-Gz6"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="0.0" y="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3b-49-9ku" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="1048"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="9sr-Ax-Sfq">
+            <objects>
+                <viewController storyboardIdentifier="walk3bepid" id="xdf-xf-nt9" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oFB-E1-a1C"/>
+                        <viewControllerLayoutGuide type="bottom" id="iWJ-cN-uz3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Da7-zt-VdH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" text="    Worked in application projects iOS so far in two challenges. " selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9Z-xP-UMI">
+                                <rect key="frame" x="175" y="380" width="250" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SfU-wc-AMo"/>
+                                    <constraint firstAttribute="height" constant="117" id="Xg8-un-0gc"/>
+                                </constraints>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="work" translatesAutoresizingMaskIntoConstraints="NO" id="9Pk-5v-3Fp">
+                                <rect key="frame" x="216" y="88" width="168" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="AS9-n7-d6f"/>
+                                    <constraint firstAttribute="height" constant="161" id="lwV-7g-M4K"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.28177377809999998" blue="0.14847569059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="U9Z-xP-UMI" secondAttribute="centerY" constant="-138.5" id="DCj-jl-5S0"/>
+                            <constraint firstAttribute="centerX" secondItem="U9Z-xP-UMI" secondAttribute="centerX" id="WQl-Sm-mlG"/>
+                            <constraint firstAttribute="centerX" secondItem="9Pk-5v-3Fp" secondAttribute="centerX" id="d1E-H4-IdF"/>
+                            <constraint firstAttribute="centerY" secondItem="9Pk-5v-3Fp" secondAttribute="centerY" constant="131.5" id="kEw-vw-kQZ"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.69999999999999996" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXA-Vy-4Rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3349" y="1048"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="h1N-sA-h56">
+            <objects>
+                <viewController storyboardIdentifier="walk1fa7" id="4On-sf-Pna" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eRw-8n-iUi"/>
+                        <viewControllerLayoutGuide type="bottom" id="de6-o8-HZZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ja9-oK-ygL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="zombiesJump" translatesAutoresizingMaskIntoConstraints="NO" id="QbA-qc-hnl">
+                                <rect key="frame" x="212" y="315" width="176" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="210" id="AdK-zJ-xIv"/>
+                                    <constraint firstAttribute="width" constant="176" id="LxU-du-Pl1"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jn0-pQ-jMU">
+                                <rect key="frame" x="154" y="82" width="316" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="316" id="K9D-VN-bCF"/>
+                                    <constraint firstAttribute="height" constant="128" id="wlJ-aK-BZx"/>
+                                </constraints>
+                                <string key="text">    I created a mobile game called "Zombie Jump". Built using the Corona SDK tool together with the Lua programming language, by the way developed in Brazil.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.49493499800000001" blue="0.2165244606" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="QbA-qc-hnl" secondAttribute="centerX" id="jWx-8l-Ufi"/>
+                            <constraint firstAttribute="centerX" secondItem="jn0-pQ-jMU" secondAttribute="centerX" constant="-12" id="mB8-yZ-byj"/>
+                            <constraint firstAttribute="centerY" secondItem="jn0-pQ-jMU" secondAttribute="centerY" constant="154" id="pao-i0-heW"/>
+                            <constraint firstAttribute="centerY" secondItem="QbA-qc-hnl" secondAttribute="centerY" constant="-120" id="uDO-C7-H53"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="1.2" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speed">
+                            <point key="value" x="1" y="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QWF-Gy-5XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1917" y="301"/>
+        </scene>
+        <!--Walkthrough Page View Controller-->
+        <scene sceneID="tGE-BL-Q2C">
+            <objects>
+                <viewController storyboardIdentifier="walk2fa7" id="Evf-Od-uUW" customClass="BWWalkthroughPageViewController" customModule="AdolfhoBeserra" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oLM-iz-tUy"/>
+                        <viewControllerLayoutGuide type="bottom" id="OFm-Kv-M55"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6Xw-v3-c9C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nkc-xL-BIg">
+                                <rect key="frame" x="152" y="74" width="296" height="197"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="197" id="8FN-p0-wUO"/>
+                                    <constraint firstAttribute="width" constant="296" id="fUS-zp-gDB"/>
+                                </constraints>
+                                <string key="text">    Also taking part in website creation called “Classificados do cangaço”. A site that aimed to create a network of sales and negotiations between users. Like a newspaper, in the classified section. It was development used Ruby on Rails.</string>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TeluguSangamMN" family="Telugu Sangam MN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="classificados" translatesAutoresizingMaskIntoConstraints="NO" id="7ZD-Ic-bs7">
+                                <rect key="frame" x="199" y="300" width="203" height="202"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="JCR-2e-Sye"/>
+                                    <constraint firstAttribute="width" constant="203" id="dls-rx-dSb"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80784313730000001" green="0.28177377809999998" blue="0.14847569059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="7ZD-Ic-bs7" secondAttribute="centerY" constant="-101" id="8CH-S4-eLj"/>
+                            <constraint firstAttribute="centerY" secondItem="nkc-xL-BIg" secondAttribute="centerY" constant="127.5" id="V0P-aa-GR0"/>
+                            <constraint firstAttribute="centerX" secondItem="nkc-xL-BIg" secondAttribute="centerX" id="dJG-hv-HeS"/>
+                            <constraint firstAttribute="centerX" secondItem="7ZD-Ic-bs7" secondAttribute="centerX" constant="-0.5" id="s40-kO-9qq"/>
+                        </constraints>
+                    </view>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="point" keyPath="speedVariance">
+                            <point key="value" x="0.0" y="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="animationType" value="InOut"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUL-eh-KRi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2625" y="301"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="academic" width="128" height="128"/>
+        <image name="bepid" width="300" height="180"/>
+        <image name="classificados" width="256" height="256"/>
+        <image name="development" width="128" height="128"/>
+        <image name="ebcs" width="64" height="64"/>
+        <image name="fa7IconGreat" width="341" height="341"/>
+        <image name="fastMapApp" width="163" height="307"/>
+        <image name="grandeEmpresa" width="128" height="128"/>
+        <image name="group" width="128" height="128"/>
+        <image name="iRatingApp" width="512" height="512"/>
+        <image name="ifceGreat" width="100" height="134"/>
+        <image name="mp" width="128" height="128"/>
+        <image name="nextButton" width="50" height="50"/>
+        <image name="nuvem1" width="64" height="35"/>
+        <image name="nuvem2" width="64" height="35"/>
+        <image name="prevButton" width="50" height="50"/>
+        <image name="work" width="128" height="128"/>
+        <image name="zombiesJump" width="365" height="385"/>
+    </resources>
+</document>
